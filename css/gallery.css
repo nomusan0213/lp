@@ -1,0 +1,60 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(227,226,211);
+}
+
+.category {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* メニューの背景色 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
+    text-align: center; /* 中央揃え */
+    z-index: 1000; /* オーバーラップの際にメニューを最前面に */
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category ul li {
+    display: inline-block;
+    margin-right: 20px; /* メニュー間の間隔を調整 */
+}
+
+.category ul li:last-child {
+    margin-right: 0; /* 最後のメニューには間隔を設定しない */
+}
+
+.category ul li a {
+    text-decoration: none;
+    color: #333; /* メニューテキストの色 */
+    font-weight: bold; /* メニューテキストの太字 */
+    font-size: 18px; /* メニューテキストのフォントサイズ */
+}
+
+.gallery-section h1 {
+    text-align: center;
+    margin: 50px auto;
+}
+.gallery-img {
+    transform: scale(1);
+    transition: transform 1s ease; 
+    margin: 8px;
+    width: auto;
+    height: 311px;
+}
+.gallery-img:hover {
+    transform: scale(1.2); /* ホバー時にズームイン */
+    z-index: 999;
+}
+.space {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 画像を水平中央に配置 */
+}

@@ -1,0 +1,427 @@
+@charset "utf-8";
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(227,226,211);
+    white-space: nowrap;
+}
+a {
+  text-decoration: none !important; /* 下線を非表示にする */
+  color: inherit; /* デフォルトのテキスト色を維持 */
+  cursor: pointer; /* リンクのカーソルスタイルを指定 */
+}
+header {
+  margin: 0; /* マージンを削除 */
+}
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 20px; /* フォントサイズを設定 */
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu li {
+  margin-right: 20px;
+}
+.menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  font-weight: bold;
+}
+.reserve-menu {
+  padding: 16px;
+  border: 2px solid white; /* ボーダーの幅と色を指定 */
+}
+#top-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 20px; /* フォントサイズを設定 */
+}
+.top-logo {
+  width: 200px; /* 画像の幅を100%に設定 */
+  height: auto; /* 高さを自動調整して縦横比を保つ */
+}
+/*************************
+==== section1
+*************************/
+section1 {
+  width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
+  height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.header-img {
+  width: 100vw; /* 画面の幅いっぱいに画像を広げる */
+  height: 100vh; /* 画面の高さいっぱいに画像を広げる */
+  object-fit: cover; /* 画像を中央に配置し、アスペクト比を保持して画面いっぱいに表示 */
+  display: none;
+}
+
+/*************************
+==== section2
+*************************/
+section2 {
+  position: relative;
+  width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
+  height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
+}
+section2 .space-1 {
+  position: relative;
+}
+section2 .space-1 p {
+  margin: 200px auto;
+  font-size: 30px;
+  writing-mode: vertical-rl;
+}
+.sec2-img01 {
+  z-index: 999;
+  position: absolute;
+  top: 400px;
+  left: 620px;
+  width: 300px;
+  height: auto;
+}
+.sec2-img02 {
+  position: absolute;
+  top: 0px;
+  left: 400px;
+  width: 300px;
+  height: auto;
+}
+.sec2-img03 {
+  position: absolute;
+  top: -140px;
+  left: 1000px;
+  width: 200px;
+  height: auto;
+}
+.sec2-img04 {
+  z-index: 999;
+  position: absolute;
+  top: 50px;
+  left: 1150px;
+  width: 400px;
+  height: auto;
+}
+.sec2-img05 {
+  position: absolute;
+  top: -100px;
+  left: 500px;
+  width: 300px;
+  height: auto;
+}
+.sec2-img06 {
+  position: absolute;
+  top: 300px;
+  left: 1050px;
+  width: 300px;
+  height: auto;
+}
+.sec2-img07 {
+  position: absolute;
+  top: 500px;
+  left: 550px;
+  width: 200px;
+  height: auto;
+}
+/*************************
+==== section3
+*************************/
+section3 {
+  width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
+  height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section3 h2 {
+  text-align: center; /* テキストを中央揃え */
+  font-size: 24px; /* フォントサイズを設定 */
+  margin: 100px auto 50px auto;
+}
+/*************************
+==== section4
+*************************/
+.gallery-and-price {
+  background-color: rgba(255, 255, 255, 0.3); /* 白の透明度30%の背景 */
+  padding: 1rem 0px 1rem 0px;
+}
+section4 {
+  margin: 4rem 0 4rem 0;
+  width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
+  height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
+}
+section4 h2 {
+  text-align: center; /* テキストを中央揃え */
+  font-size: 24px; /* フォントサイズを設定 */
+  margin: 100px auto 50px auto;
+}
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px; /* 3列に配置するための最大幅を指定 */
+  margin: 0 auto; /* 画面中央に配置 */
+  cursor: pointer; /* カーソルをポインターに設定 */
+}
+
+#gallery a img {
+  width: 300px;
+  height: 300px;
+  margin: 10px; /* 画像間の間隔を設定 */
+  flex: 0 0 calc(33.33% - 20px); /* 3列に配置するための設定 */
+  box-sizing: border-box; /* ボックスサイズを含む */
+  
+}
+#gallery a p {
+  margin: 0 10px;
+}
+
+/*************************
+==== section5
+*************************/
+section5 {
+  margin: 4rem 0 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  flex-direction: column; /* 子要素を縦方向に配置 */
+}
+
+#price-categ {
+  display: flex; /* 子要素を横並びに配置 */
+  justify-content: center; /* 子要素を中央寄せ */
+  align-items: center; /* 子要素を中央寄せ */
+}
+#price-categ a {
+  margin: 0px 1rem 0 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  text-decoration: none; /* 下線を非表示に */
+  color: inherit; /* デフォルトのテキスト色を維持 */
+  cursor: pointer; /* リンクのカーソルスタイルを指定 */
+  border-top-left-radius: 10px; /* 左上の角を丸くする */
+  border-top-right-radius: 10px; /* 右上の角を丸くする */
+}
+.konrei-price {
+  display: flex; /* 子要素を横並びに配置 */
+  justify-content: center; /* 子要素を中央寄せ */
+  align-items: center; /* 子要素を中央寄せ */
+}
+.category-link {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.category-link.konrei-button {
+  background-color: rgb(250,247,243);
+}
+section5 img {
+  width: 600px;
+  height: auto;
+}
+.category-content {
+  display: none;
+  padding: 4rem 8rem;
+  background-color: rgb(250,247,243);
+  border-radius: 10px; /* 全ての角を10pxで丸くする */
+}    
+.konrei.category-content {
+  display: block;
+}
+.maternity-categ {
+  display: none;
+  padding: 2rem;
+  background-color: rgb(241,236,231);
+  border-radius: 10px; /* 全ての角を10pxで丸くする */
+}
+.maternity-detail-categ {
+  display: flex; /* 子要素を横並びに配置 */
+  justify-content: center; /* 子要素を中央寄せ */
+  align-items: center; /* 子要素を中央寄せ */
+}
+.maternity-detail-categ a {
+  margin: 1rem 2rem 0px 2rem;
+  padding: 1rem 2rem 0px 2rem;
+  text-decoration: none; /* 下線を非表示に */
+  color: inherit; /* デフォルトのテキスト色を維持 */
+  cursor: pointer; /* リンクのカーソルスタイルを指定 */
+  border-top-left-radius: 10px; /* 左上の角を丸くする */
+  border-top-right-radius: 10px; /* 右上の角を丸くする */
+}
+.maternity-categ.flower {
+  display: block;
+}
+.maternity-category-link.flower {
+  background-color: rgb(241,236,231);
+}
+.plan-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列のグリッドを作成 */
+  gap: 20px; /* 要素間の間隔を設定（必要に応じて調整） */
+}
+.text-detail1 {
+  margin: 0px;
+  font-weight: bold;
+}
+.text-detail2 {
+  margin: 0px;
+  font-size: 0.9rem;
+}
+.text-detail3 {
+  margin: 0px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/*************************
+==== section6
+*************************/
+section6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  flex-direction: column; /* 子要素を縦方向に配置 */
+}
+section6 h2 {
+  text-align: center;
+  font-size: 24px;
+  margin: 100px auto 50px auto;
+}
+iframe {
+  width: 100%; /* 親要素に合わせて幅を調整 */
+  max-width: 800px; /* 必要に応じて最大幅を設定 */
+  height: 1700px; /* 適切な高さを設定 */
+  border: none;
+  overflow: hidden;
+}
+
+/*************************
+==== footer
+*************************/
+footer {
+  position: fixed;
+  font-size: 20px;
+  left: 1%;
+  top: 50%;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  white-space: nowrap;
+}
+footer div {
+  position: absolute; /* 絶対位置に配置 */
+  left: 0; /* 左側に配置 */
+  top: 0; /* 上端に配置 */
+  width: 100%; /* 幅を100%に設定して親要素いっぱいに広げる */
+  height: 100%; /* 高さを100%に設定して親要素いっぱいに広げる */
+  display: flex; /* 内部の要素を水平に配置 */
+  justify-content: center; /* テキストを水平中央に配置 */
+  align-items: center; /* テキストを垂直中央に配置 */
+  background-color: #333;
+  color: black;
+  cursor: pointer;
+}
+footer div span {
+  display: none;
+}
+
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.logo {
+    width: 100%; /* 画像の幅を100%に設定 */
+    height: auto; /* 高さを自動調整して縦横比を保つ */
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* クリックイベントを透過 */
+}
+
+#loading2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* クリックイベントを透過 */
+}
+#logo-element {
+  opacity: 1.0;
+  transition: opacity 0.5s ease-in-out; 
+  max-width: 300px; /* 画像の最大幅を30pxに設定 */
+  max-height: 300px; /* 画像の最大高さを30pxに設定 */
+  color: transparent;
+  animation-name: slideAndBounceAnimation; /* アニメーション名を指定 */
+  animation-duration: 3.5s; /* アニメーションの持続時間（1秒待機 + 2秒スライド） */
+  animation-timing-function: ease-in-out; /* タイミング関数（イージング） */
+  animation-iteration-count: 1; /* 1回のみ繰り返す */
+  animation-fill-mode: forwards; /* アニメーション終了時の状態を保持 */
+}
+@keyframes slideAndBounceAnimation {
+  0% {
+    transform: translateX(0); /* 初期位置と最終位置 */
+  }
+  33.33% {
+    transform: translateX(0); /* 1秒間その場で待機 */
+  }
+  100% {
+    transform: translateX(150%); /* 2秒かけて左にスライド */
+  }
+}
+
+/* スクロールバーの縦方向 */
+::-webkit-scrollbar {
+    width: 12px; /* スクロールバーの幅 */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* スクロールバーのトラック部分の背景色 */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* スクロールバーのつまみ部分の背景色 */
+    border-radius: 6px; /* つまみ部分の角を丸くする */
+  }
+  
+  /* スクロールバーの横方向（必要な場合） */
+  ::-webkit-scrollbar-horizontal {
+    height: 12px; /* スクロールバーの高さ */
+  }
+  
+  ::-webkit-scrollbar-thumb:horizontal {
+    background: #555; /* 横方向のつまみ部分の背景色 */
+  }
