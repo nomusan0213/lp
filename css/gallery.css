@@ -58,3 +58,8 @@ body {
     flex-wrap: wrap;
     justify-content: center; /* 画像を水平中央に配置 */
 }
+@media (max-width: 768px) {
+    .category ul li a {
+        font-size: 9px; /* メニューテキストのフォントサイズ */
+    }
+}

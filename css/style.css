@@ -344,7 +344,8 @@ section5 img {
   }
   #price-categ a {
     margin: 0 0.2rem 0 0.2rem;
-    padding: 0.2rem;
+    padding: 0.5rem 1rem 0px 1rem;
+    font-size: 0.7rem
   }
   .plan-content {
     margin:0 0 0 0rem;
