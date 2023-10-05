@@ -411,7 +411,7 @@ iframe {
   background-color: rgba(255, 255, 255, 0.5);
   width: 80%;
   max-width: 600px;
-  margin: auto;
+  margin: 150px auto;
   padding: 30px;
   position: relative;
 }
@@ -423,7 +423,11 @@ iframe {
   cursor: pointer;
   font-size: 24px;
 }
-
+@media (max-width: 425px) {
+  .modal-content {
+    margin: 10px auto;
+  }
+}
 /*************************
 ==== footer
 *************************/
