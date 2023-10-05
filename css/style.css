@@ -322,13 +322,22 @@ section5 img {
   font-size: 0.9rem;
   font-weight: bold;
 }
+.caution {
+  width: 300px; /* 幅を指定 */
+  word-wrap: break-word; /* 単語の途中で折り返す */
+  white-space: normal; /* 空白文字で折り返す */
+}
 @media (max-width: 768px) {
   section5 img {
     width: 300px;
     height: auto;
   }
+  #price-categ a {
+    margin: 0 0.2rem 0 0.2rem;
+    padding: 0.2rem;
+  }
   .plan-content {
-    margin:0 0 0 7rem;
+    margin:0 0 0 0rem;
   }
   .text-detail1 {
     margin: 0px;
