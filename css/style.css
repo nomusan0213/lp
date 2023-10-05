@@ -411,9 +411,11 @@ section5 img {
   font-weight: bold;
 }
 .caution {
-  width: auto; /* 幅を指定 */
-  word-wrap: break-word; /* 単語の途中で折り返す */
-  white-space: normal; /* 空白文字で折り返す */
+  width: auto;
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 0.6rem;
+  font-weight: normal; /* フォントを通常の太さに設定 */
 }
 @media (max-width: 768px) {
   section5 img {
