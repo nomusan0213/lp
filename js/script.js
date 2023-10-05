@@ -170,9 +170,9 @@ $(document).ready(function() {
 });
 
 
-
-
-
+/*************************
+==== フッター
+*************************/
 $(document).ready(function() {
   $(window).scroll(function() {
     // スクロール位置を取得
@@ -203,5 +203,25 @@ $(document).ready(function() {
     } else if (scrollPosition >= section6Position) {
       $('#contactText').css('display', 'block');
     }
+  });
+});
+
+/*************************
+==== モーダル
+*************************/
+$(document).ready(function() {
+  // モーダルを表示する
+  $("#open-modal").click(function() {
+    $("#contact-modal").css("display", "block");
+  });
+
+  // モーダルを閉じる
+  $("#close-modal, .modal").click(function() {
+    $("#contact-modal").css("display", "none");
+  });
+
+  // モーダル内のコンテンツがクリックされても閉じないようにする
+  $(".modal-content").click(function(event) {
+    event.stopPropagation();
   });
 });
