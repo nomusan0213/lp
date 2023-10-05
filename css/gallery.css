@@ -58,6 +58,10 @@ body {
     flex-wrap: wrap;
     justify-content: center; /* 画像を水平中央に配置 */
 }
+.photo-category:hover {
+    opacity: 0.75; /* ホバー時の透明度 */
+    transition: opacity 0.3s ease; /* スムーズなトランジションを追加 */
+  }
 @media (max-width: 768px) {
     .category ul li a {
         font-size: 9px; /* メニューテキストのフォントサイズ */

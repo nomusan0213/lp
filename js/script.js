@@ -148,6 +148,22 @@ $(document).ready(function() {
 });
 
 /*************************
+==== gallery カテゴリー別
+*************************/
+$(document).ready(function() {
+  $('.photo-category').click(function(e) {
+    e.preventDefault(); // デフォルトの動作を防ぐ
+    const targetClass = $(this).data('target');
+
+    // すべてのカテゴリコンテンツを非表示に
+    $('.space').hide();
+
+    // クリックされたカテゴリコンテンツを表示
+    $('.' + targetClass).show();
+  });
+});
+
+/*************************
 ==== マタニティのタブ切り替え
 *************************/
 $(document).ready(function() {
@@ -177,6 +193,7 @@ $(document).ready(function() {
   $(window).scroll(function() {
     // スクロール位置を取得
     var scrollPosition = $(window).scrollTop();
+    var windowHeight = $(window).height(); // ウィンドウの高さ
 
     // 各セクションの位置を取得
     var section1Position = $('#section1').offset().top;
@@ -184,24 +201,33 @@ $(document).ready(function() {
     var section3Position = $('#section3').offset().top;
     var section4Position = $('#section4').offset().top;
     var section5Position = $('#section5').offset().top;
-    var section6Position = $('#section6').offset().top;
 
     // フッターのテキストを初期化
     $('footer div span').css('display', 'none');
 
     // スクロール位置に応じてフッターのテキストを切り替え
-    if (scrollPosition >= section1Position && scrollPosition < section2Position) {
+    if (
+      scrollPosition + windowHeight / 2 >= section1Position &&
+      scrollPosition + windowHeight / 2 < section2Position
+    ) {
       $('#topText').css('display', 'block');
-    } else if (scrollPosition >= section2Position && scrollPosition < section3Position) {
+    } else if (
+      scrollPosition + windowHeight / 2 >= section2Position &&
+      scrollPosition + windowHeight / 2 < section3Position
+    ) {
       $('#mindText').css('display', 'block');
-    } else if (scrollPosition >= section3Position && scrollPosition < section4Position) {
+    } else if (
+      scrollPosition + windowHeight / 2 >= section3Position &&
+      scrollPosition + windowHeight / 2 < section4Position
+    ) {
       $('#iamText').css('display', 'block');
-    } else if (scrollPosition >= section4Position && scrollPosition < section5Position) {
+    } else if (
+      scrollPosition + windowHeight / 2 >= section4Position &&
+      scrollPosition + windowHeight / 2 < section5Position
+    ) {
       $('#galleryText').css('display', 'block');
-    } else if (scrollPosition >= section5Position && scrollPosition < section6Position) {
+    } else if (scrollPosition + windowHeight / 2 >= section5Position) {
       $('#priceText').css('display', 'block');
-    } else if (scrollPosition >= section6Position) {
-      $('#contactText').css('display', 'block');
     }
   });
 });
