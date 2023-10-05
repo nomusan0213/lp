@@ -328,7 +328,7 @@ section5 img {
     height: auto;
   }
   .plan-content {
-    gap: 1rem;
+    margin:0 0 0 7rem;
   }
   .text-detail1 {
     margin: 0px;
