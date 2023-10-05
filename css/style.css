@@ -64,6 +64,16 @@ header {
   .reserve-menu {
     padding: 2px;
   }
+  .top-logo {
+    width: 100px;
+    height: auto;
+  }
+}
+@media (max-width: 425px) {
+  .top-logo {
+    width: 50px;
+    height: auto;
+  }
 }
 /*************************
 ==== section1
@@ -323,7 +333,7 @@ section5 img {
   font-weight: bold;
 }
 .caution {
-  width: 300px; /* 幅を指定 */
+  width: auto; /* 幅を指定 */
   word-wrap: break-word; /* 単語の途中で折り返す */
   white-space: normal; /* 空白文字で折り返す */
 }
@@ -347,6 +357,11 @@ section5 img {
   .text-detail2 {
     margin: 0px;
     font-size: 0.4rem;
+  }
+  .maternity-detail-categ a {
+    margin: 1rem 2rem 0px 2rem;
+    padding: 0.5rem 1rem 0px 1rem;
+    font-size: 0.7rem
   }
 }
 
