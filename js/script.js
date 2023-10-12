@@ -31,7 +31,15 @@ $(window).scroll(function() {
 ==== TOP画面スライドショー
 *************************/
 $(document).ready(function() {
-  const images = $(".header-img"); // すべての画像要素を取得
+  let images; // 画像要素を格納する変数
+
+  // 画面幅に応じて異なるクラスを持つ要素を選択
+  if ($(window).width() >= 768) {
+    images = $(".header-img"); // 横幅が768以上の場合
+  } else {
+    images = $(".header-img-2"); // 横幅が768未満の場合
+  }
+
   let currentIndex = 0; // 現在の画像インデックス
 
   // 画像切り替え関数
@@ -263,8 +271,13 @@ $(document).ready(function() {
     var scroll = $(window).scrollTop();
 
     if (element.offset().top - scroll < windowHeight) {
-      // 要素が画面内に表示されたらクリッピングを変更
-      element.css("clip-path", "circle(50% at center)");
+      if ($(window).width() >= 425) {
+        // 横幅が425以上の場合
+        element.css("clip-path", "circle(30% at center)");
+      } else {
+        // 横幅が425未満の場合
+        element.css("clip-path", "circle(40% at center)");
+      }
     }
   });
 });

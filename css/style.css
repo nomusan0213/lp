@@ -92,14 +92,18 @@ header {
   object-fit: cover; /* 画像を中央に配置し、アスペクト比を保持して画面いっぱいに表示 */
   display: none;
 }
-
-/* スクリーン幅が768px未満の場合のスタイル */
-@media (max-width: 768px) {
-  .section1 {
-    /* ここにスクリーン幅が768px未満の場合のスタイルを追加 */
-  }
-  .header-img {
-    /* ここにスクリーン幅が768px未満の場合の画像のスタイルを追加 */
+.header-img-2 {
+  width: 100vw; /* 画面幅に合わせて画像の幅を調整 */
+  height: 100vh; /* 高さを自動調整し、アスペクト比を保持 */
+  object-fit: cover; /* 画像を中央に配置し、アスペクト比を保持して画面いっぱいに表示 */
+  display: none;
+}
+.mobile-header-img1 {
+  object-position: -280px center;
+}
+@media (max-width: 425px) {
+  .mobile-header-img1 {
+    object-position: -400px center;
   }
 }
 
@@ -110,6 +114,7 @@ section2 {
   width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
   height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
   display: flex;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -123,8 +128,10 @@ section2 .space-1 {
   flex-direction: row; 
   gap: 10px;
 }
-.space-1 p {
+.section2-title {
+  font-size: 48px;
   text-align: center;
+  margin: 100px;
 }
 .img-background-column {
   display: flex;
@@ -137,12 +144,25 @@ section2 .space-1 {
   height: auto;
   filter: brightness(50%)
 }
+.space-1 img:hover {
+  filter: brightness(90%);
+}
 .circle-clip1 {
   clip-path: circle(0% at center);
   transition: clip-path 5s ease; /* クリッピングのトランジションを5秒に設定 */
 }
 
 @media (max-width: 425px) {
+  .space-1 img {
+    width: 50px;
+    height: auto;
+    filter: brightness(50%)
+  }
+  .section2-title {
+    font-size: 12px;
+    text-align: center;
+    margin: 0px;
+  }
 }
 /*************************
 ==== section3
