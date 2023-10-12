@@ -251,3 +251,20 @@ $(document).ready(function() {
     event.stopPropagation();
   });
 });
+
+/*************************
+==== セクション2の丸型が広がっていく
+*************************/
+$(document).ready(function() {
+  // ウィンドウのスクロールを監視し、指定の要素が画面に表示されたらアニメーションを開始
+  $(window).scroll(function() {
+    var element = $(".circle-clip1");
+    var windowHeight = $(window).height();
+    var scroll = $(window).scrollTop();
+
+    if (element.offset().top - scroll < windowHeight) {
+      // 要素が画面内に表示されたらクリッピングを変更
+      element.css("clip-path", "circle(50% at center)");
+    }
+  });
+});

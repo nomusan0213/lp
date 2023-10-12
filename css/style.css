@@ -87,8 +87,8 @@ header {
   overflow: hidden;
 }
 .header-img {
-  width: 100%; /* 画面幅に合わせて画像の幅を調整 */
-  height: auto; /* 高さを自動調整し、アスペクト比を保持 */
+  width: 100vw; /* 画面幅に合わせて画像の幅を調整 */
+  height: 100vh; /* 高さを自動調整し、アスペクト比を保持 */
   object-fit: cover; /* 画像を中央に配置し、アスペクト比を保持して画面いっぱいに表示 */
   display: none;
 }
@@ -107,11 +107,6 @@ header {
 ==== section2
 *************************/
 section2 {
-  /* position: relative;
-  margin: 4rem 0 4rem 0;
-  width: 100vw; 
-  height: 100vh;  */
-
   width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
   height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
   display: flex;
@@ -123,139 +118,31 @@ section2 {
 section2 .space-1 {
   position: relative;
 }
-section2 .space-1 p {
-  margin: 200px auto;
-  font-size: 30px;
-  writing-mode: vertical-rl;
+.space-1 {
+  display: flex;
+  flex-direction: row; 
+  gap: 10px;
 }
-.sec2-img01 {
-  z-index: -1;
-  position: absolute;
-  top: 105%; /* 上から5%の位置に配置 */
-  left: 75%; /* 左から40%の位置に配置 */
-  width: 20%; /* 幅を親要素の幅に対する割合で指定 */
+.space-1 p {
+  text-align: center;
+}
+.img-background-column {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  gap: 10px;
+}
+.space-1 img {
+  width: 150px;
   height: auto;
-  opacity: 0.9; /* 透明度を設定 */
+  filter: brightness(50%)
 }
-.sec2-img02 {
-  z-index: -1;
-  position: absolute;
-  top: 30%;
-  left: 8%; /* 左から20%の位置に配置 */
-  width: 20%; /* 幅を親要素の幅に対する割合で指定 */
-  height: auto;
-  opacity: 0.8; /* 透明度を設定 */
+.circle-clip1 {
+  clip-path: circle(0% at center);
+  transition: clip-path 5s ease; /* クリッピングのトランジションを5秒に設定 */
 }
-/* 縦画像 */
-.sec2-img03 {
-  z-index: -1;
-  position: absolute;
-  top: -5%; /* 上から10%の位置に配置 */
-  left: 60%; /* 左から50%の位置に配置 */
-  width: 20%; /* 幅を親要素の幅に対する割合で指定 */
-  height: auto;
-  opacity: 0.9; /* 透明度を設定 */
-}
-.sec2-img04 {
-  z-index: -1;
-  position: absolute;
-  top: 0%; /* 上から5%の位置に配置 */
-  left: 70%; /* 左から70%の位置に配置 */
-  width: 20%; /* 幅を親要素の幅に対する割合で指定 */
-  height: auto;
-  opacity: 0.9; /* 透明度を設定 */
-}
-.sec2-img05 {
-  z-index: -1;
-  position: absolute;
-  top: -20%; /* 上から5%の位置に配置 */
-  left: 20%; /* 左から40%の位置に配置 */
-  width: 20%; /* 幅を親要素の幅に対する割合で指定 */
-  height: auto;
-  opacity: 0.9; /* 透明度を設定 */
-}
-.sec2-img06 {
-  z-index: -1;
-  position: absolute;
-  top: 90%; /* 上から15%の位置に配置 */
-  left: 55%; /* 左から75%の位置に配置 */
-  width: 15%; /* 幅を親要素の幅に対する割合で指定 */
-  height: auto;
-  opacity: 0.9; /* 透明度を設定 */
-}
-.sec2-img07 {
-  z-index: -1;
-  position: absolute;
-  top: 80%; /* 上から25%の位置に配置 */
-  left: 20%; /* 左から45%の位置に配置 */
-  width: 20%; /* 幅を親要素の幅に対する割合で指定 */
-  height: auto;
-  opacity: 0.9; /* 透明度を設定 */
-}
+
 @media (max-width: 425px) {
-  .sec2-img01 {
-    z-index: -1;
-    position: absolute;
-    top: 45%; /* 上から5%の位置に配置 */
-    left: 45%; /* 左から40%の位置に配置 */
-    width: 40%; /* 幅を親要素の幅に対する割合で指定 */
-    height: auto;
-    opacity: 0.9; /* 透明度を設定 */
-  }
-  .sec2-img02 {
-    z-index: -1;
-    position: absolute;
-    top: 20%;
-    left: -5%; /* 左から20%の位置に配置 */
-    width: 35%; /* 幅を親要素の幅に対する割合で指定 */
-    height: auto;
-    opacity: 0.8; /* 透明度を設定 */
-  }
-  .sec2-img03 {
-    z-index: -1;
-    position: absolute;
-    top: -20%; /* 上から10%の位置に配置 */
-    left: 60%; /* 左から50%の位置に配置 */
-    width: 35%; /* 幅を親要素の幅に対する割合で指定 */
-    height: auto;
-    opacity: 0.9; /* 透明度を設定 */
-  }
-  .sec2-img04 {
-    z-index: -1;
-    position: absolute;
-    top: 30%; /* 上から5%の位置に配置 */
-    left: 70%; /* 左から70%の位置に配置 */
-    width: 30%; /* 幅を親要素の幅に対する割合で指定 */
-    height: auto;
-    opacity: 0.9; /* 透明度を設定 */
-  }
-  .sec2-img05 {
-    z-index: -1;
-    position: absolute;
-    top: -10%; /* 上から5%の位置に配置 */
-    left: 10%; /* 左から40%の位置に配置 */
-    width: 50%; /* 幅を親要素の幅に対する割合で指定 */
-    height: auto;
-    opacity: 0.9; /* 透明度を設定 */
-  }
-  .sec2-img06 {
-    z-index: -1;
-    position: absolute;
-    top: 65%; /* 上から15%の位置に配置 */
-    left: 55%; /* 左から75%の位置に配置 */
-    width: 40%; /* 幅を親要素の幅に対する割合で指定 */
-    height: auto;
-    opacity: 0.9; /* 透明度を設定 */
-  }
-  .sec2-img07 {
-    z-index: -1;
-    position: absolute;
-    top: 60%; /* 上から25%の位置に配置 */
-    left: 5%; /* 左から45%の位置に配置 */
-    width: 40%; /* 幅を親要素の幅に対する割合で指定 */
-    height: auto;
-    opacity: 0.9; /* 透明度を設定 */
-  }
 }
 /*************************
 ==== section3
@@ -326,8 +213,8 @@ section4 h2 {
 
 .image-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   margin: 10px;
   flex: 0 0 calc(33.33% - 20px);
   box-sizing: border-box;
