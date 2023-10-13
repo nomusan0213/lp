@@ -215,6 +215,9 @@ section3 h2 {
   .sec3_about_me_info {
     font-size: 12px;
   }
+  .sec3_frame {
+    flex-direction: column;
+  }
 }
 /*************************
 ==== section4
