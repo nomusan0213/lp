@@ -138,6 +138,7 @@ section2 .space-1 {
   left: 50%; /* 左端から中央に配置 */
   transform: translate(-50%, -50%); /* 中央揃え */
   z-index: -1;
+  display: block;
 }
 .img-background-column {
   display: flex;
@@ -158,10 +159,13 @@ section2 .space-1 {
   transition: clip-path 5s ease; /* クリッピングのトランジションを5秒に設定 */
 }
 .text-sec2 {
+  margin: 0px 0px;
   text-align: center;
+  display: none;
+  z-index: -10;
 }
 @media (max-width: 425px) {
-  section2 {
+  #section2 {
     width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
     height: 150vh; /* 画面の高さいっぱいにセクションを広げる */
   }
@@ -176,24 +180,32 @@ section2 .space-1 {
     transform: translate(-50%, -50%); /* 横方向と縦方向の中央揃え */
     font-size: 20px; /* フォントサイズを調整 */
   }
+  .section2-titele {
+    display: none;
+  }
+  .text-sec2 {
+    display: block;
+  }
 }
 /*************************
 ==== section3
 *************************/
-section3 {
+#section3 {
   width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
-  height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
+  height: 70vh; /* 画面の高さいっぱいにセクションを広げる */
   display: flex;
   flex-direction: column; 
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  border-top: 2px solid rgb(204,204,204);
+  border-bottom: 2px solid rgb(204,204,204);
 }
-section3 h2 {
-  font-size: 40px; /* フォントサイズを設定 */
-  border-bottom: 2px solid black; /* 下部に2pxの黒いボーダーを設定 */
+#section3 h2 {
+  font-size: 40px;
+  text-align: center;
   margin: 0;
-  margin-bottom: 5px;
+  margin: 2rem auto 0 auto; 
 }
 .about_me_img {
   width: 500px;
@@ -229,6 +241,9 @@ section3 h2 {
   .sec3_frame {
     flex-direction: column;
   }
+  #section3 {
+    height: 110vh; 
+  }
 }
 /*************************
 ==== section4
@@ -238,15 +253,18 @@ section3 h2 {
   padding: 1rem 0px 1rem 0px;
   margin: 10rem 0 4rem 0;
 }
-section4 {
+#section4 {
   margin: 10rem 0 4rem 0;
   width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
   height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
+  border-top: 2px solid rgb(204,204,204);
+  border-bottom: 2px solid rgb(204,204,204);
 }
-section4 h2 {
-  text-align: center; /* テキストを中央揃え */
-  font-size: 40px; /* フォントサイズを設定 */
-  border-bottom: 2px solid black;
+#section4 h2 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  margin: 2rem auto 0 auto; 
 }
 #gallery {
   display: flex;
@@ -266,8 +284,7 @@ section4 h2 {
   margin: 10px;
   flex: 0 0 calc(33.33% - 20px);
   box-sizing: border-box;
-  overflow: hidden; /* オーバーレイを画像に適用するために必要 */
-  z-index: -10;
+  overflow: hidden;
 }
 
 .image-container img {
@@ -301,17 +318,16 @@ section4 h2 {
 #gallery a p {
   margin: 0 10px;
 }
-@media (max-width: 768px) {
-  section4 h2 {
-    margin: 0;
-    margin-bottom: 5px;
+@media (max-width: 425px) {
+  #gallery {
+    flex-direction: column;
   }
 }
 
 /*************************
 ==== section5
 *************************/
-section5 {
+#section5 {
   margin: 4rem 0 4rem 0;
   display: flex;
   justify-content: center;
@@ -320,13 +336,14 @@ section5 {
   height: auto;
   overflow: hidden;
   flex-direction: column; /* 子要素を縦方向に配置 */
+  border-top: 2px solid rgb(204,204,204);
+  border-bottom: 2px solid rgb(204,204,204);
 }
-section5 h2 {
-  text-align: center; /* テキストを中央揃え */
-  font-size: 40px; /* フォントサイズを設定 */
-  border-bottom: 2px solid black;
+#section5 h2 {
+  font-size: 40px;
+  text-align: center;
   margin: 0;
-  margin-bottom: 5px;
+  margin: 2rem auto 0 auto; 
 }
 #price-categ {
   display: flex; /* 子要素を横並びに配置 */
@@ -604,13 +621,13 @@ footer div span {
 @media (max-width: 425px) {
   @keyframes slideAndBounceAnimation {
     0% {
-      transform: translateX(25%); /* 初期位置と最終位置 */
+      transform: translate(25%, 100%);; /* 初期位置と最終位置 */
     }
     33.33% {
-      transform: translateX(25%); /* 1秒間その場で待機 */
+      transform: translate(25%, 100%);; /* 1秒間その場で待機 */
     }
     100% {
-      transform: translateX(150%); /* 2秒かけて左にスライド */
+      transform: translate(25%, -200%);; /* 2秒かけて左にスライド */
     }
   }
 }
