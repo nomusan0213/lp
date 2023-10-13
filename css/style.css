@@ -110,7 +110,7 @@ header {
 /*************************
 ==== section2
 *************************/
-section2 {
+#section2 {
   width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
   height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
   overflow: hidden;
@@ -118,7 +118,7 @@ section2 {
   color: white;
   font-size: 24px;
 }
-section2 .space-1 {
+#section2 .space-1 {
   position: relative;
 }
 .space-1 {
@@ -131,14 +131,6 @@ section2 .space-1 {
   transform: translateX(-50%); /* 横方向の中央揃え */
   z-index: -10;
   overflow: hidden;
-}
-.section2-titele {
-  position: absolute;
-  top: 50%; /* 上端から中央に配置 */
-  left: 50%; /* 左端から中央に配置 */
-  transform: translate(-50%, -50%); /* 中央揃え */
-  z-index: -1;
-  display: block;
 }
 .img-background-column {
   display: flex;
@@ -159,10 +151,14 @@ section2 .space-1 {
   transition: clip-path 5s ease; /* クリッピングのトランジションを5秒に設定 */
 }
 .text-sec2 {
-  margin: 0px 0px;
+  margin: 0;
   text-align: center;
-  display: none;
+  display: block; /* 'none' から 'block' に変更 */
   z-index: -10;
+  position: absolute;
+  top: 50%; /* 上端から中央に配置 */
+  left: 50%; /* 左端から中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃えのために追加 */
 }
 @media (max-width: 425px) {
   #section2 {
@@ -174,17 +170,8 @@ section2 .space-1 {
     height: auto;
     filter: brightness(50%)
   }
-  .section2-titele {
-    top: 50%; /* 画面上部から中央に配置 */
-    left: 50%; /* 画面横幅の中央に配置 */
-    transform: translate(-50%, -50%); /* 横方向と縦方向の中央揃え */
-    font-size: 20px; /* フォントサイズを調整 */
-  }
-  .section2-titele {
-    display: none;
-  }
-  .text-sec2 {
-    display: block;
+  .img-background-column {
+    gap: 5px;
   }
 }
 /*************************

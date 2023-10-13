@@ -276,7 +276,7 @@ $(document).ready(function() {
         element.css("clip-path", "circle(25% at center)");
       } else {
         // 横幅が425未満の場合
-        element.css("clip-path", "circle(40% at center)");
+        element.css("clip-path", "circle(50% at center)");
       }
     }
   });
