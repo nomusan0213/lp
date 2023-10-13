@@ -165,6 +165,12 @@ section2 .space-1 {
     height: auto;
     filter: brightness(50%)
   }
+  .section2-titele {
+    top: 10%; /* 画面上部から少し下に配置 */
+    left: 50%; /* 画面横幅の中央に配置 */
+    transform: translateX(-50%); /* 横方向の中央揃え */
+    font-size: 20px; /* フォントサイズを調整 */
+  }
 }
 /*************************
 ==== section3
