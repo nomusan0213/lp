@@ -115,7 +115,6 @@ section2 {
   height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
   overflow: hidden;
   position: relative;
-  text-align: center; /* テキストを中央揃えにする */
   color: white;
   font-size: 24px;
 }
@@ -160,15 +159,19 @@ section2 .space-1 {
 }
 
 @media (max-width: 425px) {
+  section2 {
+    width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
+    height: 150vh; /* 画面の高さいっぱいにセクションを広げる */
+  }
   .space-1 img {
     width: 50px;
     height: auto;
     filter: brightness(50%)
   }
   .section2-titele {
-    top: 10%; /* 画面上部から少し下に配置 */
+    top: 50%; /* 画面上部から中央に配置 */
     left: 50%; /* 画面横幅の中央に配置 */
-    transform: translateX(-50%); /* 横方向の中央揃え */
+    transform: translate(-50%, -50%); /* 横方向と縦方向の中央揃え */
     font-size: 20px; /* フォントサイズを調整 */
   }
 }
@@ -187,6 +190,8 @@ section3 {
 section3 h2 {
   font-size: 40px; /* フォントサイズを設定 */
   border-bottom: 2px solid black; /* 下部に2pxの黒いボーダーを設定 */
+  margin: 0;
+  margin-bottom: 5px;
 }
 .about_me_img {
   width: 500px;
@@ -295,7 +300,8 @@ section4 h2 {
 }
 @media (max-width: 768px) {
   section4 h2 {
-    margin: 0rem auto 10px auto;
+    margin: 0;
+    margin-bottom: 5px;
   }
 }
 
@@ -316,6 +322,8 @@ section5 h2 {
   text-align: center; /* テキストを中央揃え */
   font-size: 40px; /* フォントサイズを設定 */
   border-bottom: 2px solid black;
+  margin: 0;
+  margin-bottom: 5px;
 }
 #price-categ {
   display: flex; /* 子要素を横並びに配置 */
