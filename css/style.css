@@ -131,6 +131,7 @@ section2 .space-1 {
   left: 50%; /* 左端から中央に配置 */
   transform: translateX(-50%); /* 横方向の中央揃え */
   z-index: -10;
+  overflow: hidden;
 }
 .section2-titele {
   position: absolute;
@@ -576,13 +577,27 @@ footer div span {
 }
 @keyframes slideAndBounceAnimation {
   0% {
-    transform: translateX(0); /* 初期位置と最終位置 */
+    transform: translateX(0%); /* 初期位置と最終位置 */
   }
   33.33% {
-    transform: translateX(0); /* 1秒間その場で待機 */
+    transform: translateX(0%); /* 1秒間その場で待機 */
   }
   100% {
     transform: translateX(150%); /* 2秒かけて左にスライド */
+  }
+}
+
+@media (max-width: 425px) {
+  @keyframes slideAndBounceAnimation {
+    0% {
+      transform: translateX(25%); /* 初期位置と最終位置 */
+    }
+    33.33% {
+      transform: translateX(25%); /* 1秒間その場で待機 */
+    }
+    100% {
+      transform: translateX(150%); /* 2秒かけて左にスライド */
+    }
   }
 }
 
