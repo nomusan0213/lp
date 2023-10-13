@@ -150,16 +150,6 @@ header {
   clip-path: circle(0% at center);
   transition: clip-path 5s ease; /* クリッピングのトランジションを5秒に設定 */
 }
-.text-sec2 {
-  margin: 0;
-  text-align: center;
-  display: block; /* 'none' から 'block' に変更 */
-  z-index: -10;
-  position: absolute;
-  top: 50%; /* 上端から中央に配置 */
-  left: 50%; /* 左端から中央に配置 */
-  transform: translate(-50%, -50%); /* 中央揃えのために追加 */
-}
 @media (max-width: 425px) {
   #section2 {
     width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
@@ -539,7 +529,7 @@ footer div span {
   .logo {
     width: 50%; 
     height: auto; 
-}
+  }
 }
 
 #loading {
@@ -561,11 +551,29 @@ footer div span {
   left: 0;
   width: 100%;
   height: 100%;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: none; /* クリックイベントを透過 */
 }
+.text-sec2 {
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  color: white;
+  font-size: 60px;
+  pointer-events: none;
+}
+@media (max-width: 425px) {
+  .text-sec2 {
+    font-size: 19px;
+  }
+}
+
 #logo-element {
   opacity: 1.0;
   transition: opacity 0.5s ease-in-out; 

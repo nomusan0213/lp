@@ -27,6 +27,39 @@ $(window).scroll(function() {
   }
 });
 
+// スクロールイベントを監視
+$(window).scroll(function() {
+  var scrollPosition = $(this).scrollTop();
+  var logoElement = $(".text-sec2");
+  var windowWidth = $(window).width(); // ウィンドウの横幅を取得
+
+  if (windowWidth <= 425) { // 横幅が425以下の場合
+    if (scrollPosition < 400) {
+      logoElement.css("opacity", 0);
+    } else if (scrollPosition >= 500 && scrollPosition < 550) {
+      logoElement.css("opacity", 0.5);
+    } else if (scrollPosition >= 550 && scrollPosition < 700) {
+      logoElement.css("opacity", 1);
+    } else if (scrollPosition >= 700 && scrollPosition < 750) {
+      logoElement.css("opacity", 0.5);
+    } else {
+      logoElement.css("opacity", 0);
+    }
+  } else { // 横幅が425より大きい場合
+    if (scrollPosition < 600) {
+      logoElement.css("opacity", 0);
+    } else if (scrollPosition >= 600 && scrollPosition < 800) {
+      logoElement.css("opacity", 0.5);
+    } else if (scrollPosition >= 800 && scrollPosition < 1200) {
+      logoElement.css("opacity", 1);
+    } else if (scrollPosition >= 1200 && scrollPosition < 1500) {
+      logoElement.css("opacity", 0.5);
+    } else {
+      logoElement.css("opacity", 0);
+    }
+  }
+});
+
 /*************************
 ==== TOP画面スライドショー
 *************************/
@@ -273,7 +306,7 @@ $(document).ready(function() {
     if (element.offset().top - scroll < windowHeight) {
       if ($(window).width() >= 425) {
         // 横幅が425以上の場合
-        element.css("clip-path", "circle(25% at center)");
+        element.css("clip-path", "circle(30% at center)");
       } else {
         // 横幅が425未満の場合
         element.css("clip-path", "circle(50% at center)");
