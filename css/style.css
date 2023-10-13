@@ -165,18 +165,13 @@ section2 .space-1 {
     height: auto;
     filter: brightness(50%)
   }
-  .section2-title {
-    font-size: 12px;
-    text-align: center;
-    margin: 0px;
-  }
 }
 /*************************
 ==== section3
 *************************/
 section3 {
   width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
-  height: 120vh; /* 画面の高さいっぱいにセクションを広げる */
+  height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
   display: flex;
   flex-direction: column; 
   justify-content: center;
@@ -188,7 +183,7 @@ section3 h2 {
   border-bottom: 2px solid black; /* 下部に2pxの黒いボーダーを設定 */
 }
 .about_me_img {
-  width: 30%;
+  width: 500px;
   height: auto;
 }
 .sec3_frame {
@@ -210,8 +205,10 @@ section3 h2 {
 .sec3_history {
   display: flex;
   flex-direction: row;
+  font-size: 12px;
   gap: 2rem;
 }
+
 @media (max-width: 425px) {
   .sec3_about_me_info {
     font-size: 12px;
