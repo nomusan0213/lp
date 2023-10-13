@@ -157,7 +157,9 @@ section2 .space-1 {
   clip-path: circle(0% at center);
   transition: clip-path 5s ease; /* クリッピングのトランジションを5秒に設定 */
 }
-
+.text-sec2 {
+  text-align: center;
+}
 @media (max-width: 425px) {
   section2 {
     width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
@@ -265,6 +267,7 @@ section4 h2 {
   flex: 0 0 calc(33.33% - 20px);
   box-sizing: border-box;
   overflow: hidden; /* オーバーレイを画像に適用するために必要 */
+  z-index: -10;
 }
 
 .image-container img {
