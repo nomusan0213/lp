@@ -111,40 +111,29 @@ header {
 ==== section2
 *************************/
 #section2 {
-  width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
-  height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
   position: relative;
   color: white;
   font-size: 24px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden; /* オーバーフローを隠します */
 }
+
+.bg-clip {
+  width: 100%; /* 親要素に合わせます */
+  height: 100%; /* 親要素に合わせます */
+  overflow: hidden; /* オーバーフローを隠します */
+}
+
 #section2 .space-1 {
   position: relative;
 }
-.space-1 {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  position: absolute;
-  top: 0; /* 上端から中央に配置 */
-  left: 50%; /* 左端から中央に配置 */
-  transform: translateX(-50%); /* 横方向の中央揃え */
-  z-index: -10;
-  overflow: hidden;
-}
-.img-background-column {
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  gap: 10px;
-}
-.space-1 img {
-  width: 150px;
+
+.bg-clip-img {
+  max-width: 100%; /* 画像が親要素に合わせるように調整 */
   height: auto;
-  filter: brightness(50%)
-}
-.space-1 img:hover {
-  filter: brightness(90%);
 }
 .circle-clip1 {
   clip-path: circle(0% at center);
@@ -175,7 +164,6 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-top: 2px solid rgb(204,204,204);
   border-bottom: 2px solid rgb(204,204,204);
 }
 #section3 h2 {
@@ -195,6 +183,9 @@ header {
   align-items: center; /* 縦方向の中央に配置 */
   gap: 2rem;
 }
+.sec3_about_me_info {
+  text-align: center;
+}
 
 @media (max-width: 425px) {
   .sec3_about_me_info {
@@ -204,7 +195,7 @@ header {
     flex-direction: column;
   }
   #section3 {
-    height: 110vh; 
+    height: 90vh; 
   }
 }
 /*************************
@@ -601,13 +592,13 @@ footer div span {
 @media (max-width: 425px) {
   @keyframes slideAndBounceAnimation {
     0% {
-      transform: translate(25%, 100%);; /* 初期位置と最終位置 */
+      transform: translate(0%, 100%);; /* 初期位置と最終位置 */
     }
     33.33% {
-      transform: translate(25%, 100%);; /* 1秒間その場で待機 */
+      transform: translate(0%, 100%);; /* 1秒間その場で待機 */
     }
     100% {
-      transform: translate(25%, -200%);; /* 2秒かけて左にスライド */
+      transform: translate(0%, -200%);; /* 2秒かけて左にスライド */
     }
   }
 }

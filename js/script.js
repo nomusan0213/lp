@@ -27,6 +27,9 @@ $(window).scroll(function() {
   }
 });
 
+/*************************
+==== 楽しい記憶を記録の文字
+*************************/
 // スクロールイベントを監視
 $(window).scroll(function() {
   var scrollPosition = $(this).scrollTop();
@@ -36,17 +39,17 @@ $(window).scroll(function() {
   if (windowWidth <= 425) { // 横幅が425以下の場合
     if (scrollPosition < 400) {
       logoElement.css("opacity", 0);
-    } else if (scrollPosition >= 500 && scrollPosition < 550) {
+    } else if (scrollPosition >= 400 && scrollPosition < 450) {
       logoElement.css("opacity", 0.5);
-    } else if (scrollPosition >= 550 && scrollPosition < 700) {
+    } else if (scrollPosition >= 450 && scrollPosition < 600) {
       logoElement.css("opacity", 1);
-    } else if (scrollPosition >= 700 && scrollPosition < 750) {
+    } else if (scrollPosition >= 600 && scrollPosition < 650) {
       logoElement.css("opacity", 0.5);
     } else {
       logoElement.css("opacity", 0);
     }
   } else { // 横幅が425より大きい場合
-    if (scrollPosition < 600) {
+    if (scrollPosition < 500) {
       logoElement.css("opacity", 0);
     } else if (scrollPosition >= 600 && scrollPosition < 800) {
       logoElement.css("opacity", 0.5);
@@ -105,32 +108,6 @@ $(window).scroll(function() {
   var logoElement5 = $(".sec2-img05");
   var logoElement6 = $(".sec2-img06");
   var logoElement7 = $(".sec2-img07");
-
-  // if (scrollPosition > 800) {
-  //   logoElement1.css("opacity", 1.0);
-  //   logoElement2.css("opacity", 1.0);
-  //   logoElement3.css("opacity", 1.0);
-  //   logoElement4.css("opacity", 1.0);
-  //   logoElement5.css("opacity", 1.0);
-  //   logoElement6.css("opacity", 1.0);
-  //   logoElement7.css("opacity", 1.0);
-  // } else if (scrollPosition > 600) {
-  //   logoElement1.css("opacity", 0.5);
-  //   logoElement2.css("opacity", 0.5);
-  //   logoElement3.css("opacity", 0.5);
-  //   logoElement4.css("opacity", 0.5);
-  //   logoElement5.css("opacity", 0.5);
-  //   logoElement6.css("opacity", 0.5);
-  //   logoElement7.css("opacity", 0.5);
-  // } else {
-  //   logoElement1.css("opacity", 0.0);
-  //   logoElement2.css("opacity", 0.0);
-  //   logoElement3.css("opacity", 0.0);
-  //   logoElement4.css("opacity", 0.0);
-  //   logoElement5.css("opacity", 0.0);
-  //   logoElement6.css("opacity", 0.0);
-  //   logoElement7.css("opacity", 0.0);
-  // }
 });
 
 $(document).ready(function() {
