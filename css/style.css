@@ -103,14 +103,14 @@ header {
 }
 @media (max-width: 425px) {
   .mobile-header-img1 {
-    object-position: -400px center;
+    object-position: -280px center;
   }
 }
 
 /*************************
 ==== section2
 *************************/
-#section2 {
+section2 {
   width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
   height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
   overflow: hidden;
@@ -525,14 +525,14 @@ footer div span {
 }
 
 .logo {
-    width: 100%; 
-    height: auto; 
+    width: 100%; /* 画像の幅を100%に設定 */
+    height: auto; /* 高さを自動調整して縦横比を保つ */
 }
 @media (max-width: 425px) {
   .logo {
     width: 50%; 
     height: auto; 
-  } 
+}
 }
 
 #loading {
