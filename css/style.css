@@ -47,7 +47,7 @@ header {
   top: 20px;
   left: 20px;
   font-size: 20px; /* フォントサイズを設定 */
-  z-index: 999;
+  z-index:
 }
 .top-logo {
   width: 200px; /* 画像の幅を100%に設定 */
@@ -106,7 +106,7 @@ header {
 }
 @media (max-width: 425px) {
   .mobile-header-img1 {
-    object-position: -280px center;
+    object-position: -400px center;
   }
 }
 
