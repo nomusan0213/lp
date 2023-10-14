@@ -167,7 +167,7 @@ $(document).ready(function() {
 
 
 /*************************
-==== フッター
+==== フッター 楽しい記憶を、記録に。をの表示も
 *************************/
 $(document).ready(function() {
   var logoElement = $(".text-sec2");
