@@ -1,10 +1,18 @@
 @charset "utf-8";
+@font-face {
+  font-family: 'MSP明朝';
+  src: url('path-to-font/mspmingliu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
     background-color: rgb(227,226,211);
     white-space: nowrap;
+    font-family: 'MSP明朝', serif;
 }
 a {
   text-decoration: none !important; /* 下線を非表示にする */
