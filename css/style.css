@@ -169,7 +169,6 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-bottom: 2px solid rgb(204,204,204);
 }
 #section3 h2 {
   font-size: 40px;
@@ -219,7 +218,6 @@ header {
   width: 100vw; /* 画面の幅いっぱいにセクションを広げる */
   height: 100vh; /* 画面の高さいっぱいにセクションを広げる */
   border-top: 2px solid rgb(204,204,204);
-  border-bottom: 2px solid rgb(204,204,204);
 }
 #section4 h2 {
   font-size: 40px;
@@ -300,8 +298,6 @@ header {
   height: auto;
   overflow: hidden;
   flex-direction: column; /* 子要素を縦方向に配置 */
-  border-top: 2px solid rgb(204,204,204);
-  border-bottom: 2px solid rgb(204,204,204);
 }
 #section5 h2 {
   font-size: 40px;
