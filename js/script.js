@@ -143,6 +143,18 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  // クリックイベントを設定
+  $(".photo-category").click(function() {
+    // クリックされた要素を取得
+    var clickedElement = $(this);
+    // data-target属性の値を取得
+    var target = clickedElement.data("target");
+    // 対応する要素を取得し、opacityを設定
+    $("#" + target).css("opacity", 0.75);
+  });
+});
+
 /*************************
 ==== マタニティのタブ切り替え
 *************************/

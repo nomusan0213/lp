@@ -47,7 +47,12 @@ body {
     transition: transform 1s ease; 
     margin: 8px;
     width: auto;
-    height: 311px;
+    height: 300px;
+}
+.img-frame {
+    width: auto;
+    height: 300px;
+    overflow: hidden;
 }
 .gallery-img:hover {
     transform: scale(1.2); /* ホバー時にズームイン */
@@ -62,8 +67,25 @@ body {
     opacity: 0.75; /* ホバー時の透明度 */
     transition: opacity 0.3s ease; /* スムーズなトランジションを追加 */
   }
+.maternity-photo {
+    display: none;
+}
+.hitigosan-photo {
+    display: none;
+}
+.other-photo {
+    display: none;
+}
 @media (max-width: 768px) {
     .category ul li a {
         font-size: 9px; /* メニューテキストのフォントサイズ */
+    }
+    .gallery-img {
+        width: auto;
+        height: 200px;
+    }
+    .img-frame {
+        width: auto;
+        height: 200px;
     }
 }
