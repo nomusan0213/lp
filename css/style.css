@@ -114,7 +114,7 @@ header {
 }
 @media (max-width: 425px) {
   .mobile-header-img1 {
-    object-position: -300px center;
+    object-position: -320px center;
   }
 }
 
