@@ -1,9 +1,8 @@
 /*************************
-==== data-srcの画像を遅らして読み込む
-*************************/$(document).ready(function() {
-  $("img[data-src]").lazyload({
-    effect: "fadeIn",  // 画像が読み込まれる際のエフェクト（例: フェードイン）
-  });
+==== data-srcの画像を遅れて読み込む
+*************************/
+$(document).ready(function() {
+  $("img[data-src]").lazyload();
 });
 
 /*************************
