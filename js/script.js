@@ -258,19 +258,18 @@ $(document).ready(function() {
 });
 
 /*************************
-==== 各セクションh2のアニメーション
+==== 各セクションh1,h2,h3のアニメーション
 *************************/
 $(document).ready(function() {
   $(window).on('scroll', function() {
-    updateHeadingVisibility('#section3');
-    updateHeadingVisibility('#section4');
-    updateHeadingVisibility('#section5');
-    // 他のセクションも必要に応じて追加できます。
+    updateHeadingVisibility('#section3', 'h1'); // section3ではh1タグを使用
+    updateHeadingVisibility('#section4', 'h2'); // section4ではh3タグを使用
+    updateHeadingVisibility('#section5', 'h3'); // section5ではh3タグを使用
   });
 
-  function updateHeadingVisibility(sectionId) {
+  function updateHeadingVisibility(sectionId, headingTag) {
     var aboutMeSection = $(sectionId);
-    var aboutMeHeading = $(sectionId + ' h2');
+    var aboutMeHeading = $(sectionId + ' ' + headingTag); // h1またはh3に対応
     var aboutMeHeadingPosition = aboutMeSection.offset().top;
     var windowHeight = $(window).height();
     var windowScrollPosition = $(window).scrollTop();

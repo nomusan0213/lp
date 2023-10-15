@@ -178,7 +178,7 @@ header {
   align-items: center;
   overflow: hidden;
 }
-#section3 h2 {
+#section3 h1 {
   font-size: 40px;
   text-align: center;
   margin: 0;
@@ -307,7 +307,7 @@ header {
   overflow: hidden;
   flex-direction: column; /* 子要素を縦方向に配置 */
 }
-#section5 h2 {
+#section5 h3 {
   font-size: 40px;
   text-align: center;
   margin: 0;
