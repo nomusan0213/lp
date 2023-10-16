@@ -13,6 +13,7 @@ body {
     background-color: rgb(227,226,211);
     white-space: nowrap;
     font-family: 'MSP明朝', serif;
+    overflow-x: hidden;
 }
 a {
   text-decoration: none !important; /* 下線を非表示にする */
