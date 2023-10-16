@@ -7,7 +7,7 @@
 }
 
 body {
-    overflow-x: hidden;
+ background   overflow-x: hidden;
     margin: 0;
     padding: 0;
     background-color: rgb(227,226,211);
@@ -114,7 +114,7 @@ header {
 }
 @media (max-width: 425px) {
   .mobile-header-img1 {
-    object-position: -320px center;
+    object-position: -300px center;
   }
 }
 
